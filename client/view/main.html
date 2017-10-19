@@ -1,0 +1,43 @@
+<!-- Global HTML components -->
+
+<head>
+  <title>Scouting App</title>
+</head>
+
+<template name="app_body">
+  {{> navbar}}
+  {{> Template.dynamic template=main}}
+  <footer>
+    <hr>
+    <p>Footer: Rable rable rable rable rable</p>
+    <p>Important stuff which is important possibly</p>
+  </footer>
+</template>
+  
+<template name="navbar">
+  <div style="border: 1px solid black">
+    <h1>Scouting App - Navbar</h1>
+    <ul>
+      <p>Blah blah blah. Blash basdadk efkefkje;ofj ergejweg jj</p>
+      {{#if currentUser}}
+        <p style="color: green">Logged in</p>
+      {{else}}
+        <p style="color: red">Not logged in</p>
+      {{/if}}
+    </ul>
+  </div>
+</template>
+
+<template name="login">
+  <div class="form-div">
+    <form>
+      <input type="text" name="email">
+      <input type="password" name="password">
+      <input type="submit" name="Submit" value="Login">
+    </form>
+  </div>
+</template>
+
+<template name="not_found">
+  <h1>404</h1><h2>Page not found.</h2>
+</template>
